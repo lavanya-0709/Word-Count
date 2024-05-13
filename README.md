@@ -19,16 +19,16 @@ Input the values
 End the program
 ## PROGRAM:
 ```
-#Program to find the number of words in a text file
-#DEVELOPED BY : LAVANYA S
-#REGISTER NUMBER: 212223230112
+#To write a python program for reading content from a CSV file.
+#Developed by: LAVANYA S
+#Register Number: 212223230112
 
-num=0
-with open("story.txt","r") as f1:
-    for i in f1:
-        word=i.split()
-        num += len(word)
-print("The number of words are in the file is ",num)
+import pandas as pd
+df = pd.read_csv('nba.csv')
+print(df.head(10))
+print(df.tail())
+print("Number of rows:",len(df.axes[0]))
+print("Number of columns:",len(df.axes[1]))
 ```
 
 ### OUTPUT:
